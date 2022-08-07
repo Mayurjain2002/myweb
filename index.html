@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    background: #1d2026;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+}
+nav .menu-img{
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+nav .logo-img{
+    width: 160px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+button{
+    background-color: #efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 0.5s ;
+}
+button span{
+    display: block;
+    background: #999;
+    height: 26px; width: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: background 0.5s , margin-left 0.5s;
+}
+.lamp-container{
+    position: absolute;
+    top : -20px;
+    left : 22%;
+    width: 200px;
+}
+.lamp{
+    width: 100%;
+}
+.light{
+    position: absolute;
+    top: 97%;
+    left: 46%;
+    transform: translateX(-50%);
+    width: 700px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.text{
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 50%;
+}
+.text h1{
+    font-size: 80px;
+    font-weight: 400;
+}
+.text a{
+    text-decoration: none;
+    background: #00986f;
+    padding: 14px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+.control .line{
+    width: 250px;
+    height: 4px;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+.control .line span{
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background: #00986f;
+    display: block;
+}
+.active{
+    background: green;
+}
+.active span{
+    background-color: #fff;
+    margin-left: 31px;
+}
+.on{
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="menu.png" class="menu-img">
+            <img src="logo.png" class="logo-img">
+            <ul>
+                <li><a href="">Latest</a></li>
+                <li><a href="">Modern</a></li>
+                <li><a href="">Contempory</a></li>
+                <li><a href="">Affordable</a></li>
+            </ul>
+            <button type="button" onclick="togglebtn()" id="btn"><span></span></button>
+        </nav>
+        </nav>
+    
+    <div class="lamp-container">
+        <img src="lamp.png" class="lamp">
+        <img src="light.png" class="light" id="light">
+    </div>
+    <div class="text">
+        <h1>Latest<br>in Lighting</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ducimus minus sequi quisquam facilis, labore, expedita ab accusamus quis dolorem consectetur animi commodi!</p>
+        <a href="">Chech All Connections</a>
+    </div>
+    <div class="control">
+        <p>04</p>
+        <!-- <div class="line"><span></span></div> -->
+        <p>05</p>
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
